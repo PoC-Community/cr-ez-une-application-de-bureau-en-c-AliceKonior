@@ -11,8 +11,18 @@
             <TextBox x:Name="TaskInput" Width="250" Watermark="Enter a task..."/>
             <Button x:Name="AddButton" Content="Add" Margin="10,0,0,0" Width="80"/>
         </StackPanel>
-
-        <ListBox x:Name="TaskList" Height="300"/>
+        
+        <ListBox x:Name="TaskList" Height="300">
+            <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <CheckBox IsChecked ="{Binding IsCompleted}"/>
+                            <TextBlock Text="{Binding Title}"/>
+                            <TextBlock Text="{Binding Id}"/>
+                        </StackPanel>
+                    </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <Button x:Name="DeleteButton" Content="Delete selected" Margin="0,10,0,0"/>
     </StackPanel>

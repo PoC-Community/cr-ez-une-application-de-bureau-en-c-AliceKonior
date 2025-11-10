@@ -18,7 +18,6 @@
                         <StackPanel>
                             <CheckBox IsChecked ="{Binding IsCompleted}"/>
                             <TextBlock Text="{Binding Title}"/>
-                            <TextBlock Text="{Binding Id}"/>
                         </StackPanel>
                     </DataTemplate>
             </ListBox.ItemTemplate>
